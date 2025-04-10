@@ -67,7 +67,7 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-      <h1>Calculadora</h1>
+      <h1 className={styles.title}>Calculadora</h1>
         <div>
           <Display valorDisplay={currentValue} valorDisplayPrev={previousValue + operator} />
           <Teclado
