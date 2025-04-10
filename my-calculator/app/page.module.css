@@ -14,6 +14,105 @@
   padding: 80px;
   gap: 64px;
   font-family: var(--font-geist-sans);
+  background-color: #cc64ec;
+}
+
+.display{
+  display: flex;
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  max-height: 200px;
+  height: 115px;
+  animation: fadeInUp 0.2s ease-in-out;
+  max-width: 450px;
+
+}
+
+.valor{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: #8d8a8a;
+  color: #1e1e1e;
+  padding: 7px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-radius: 5px;
+  max-width: 420px;
+
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.valorPrev {
+  color: #363636;
+  font-size: 1.2rem;
+  animation: fadeInUp 0.2s ease-in-out;
+}
+
+.valorAtual {
+  font-size: 2.2rem;
+  animation: fadeInUp 0.2s ease-in-out;
+}
+
+
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  max-width: 450px;
+  margin: 2rem auto;
+  margin-top: 0;
+  padding: 1rem;
+  background-color: #1e1e1e;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.2s ease-in-out;
+
+}
+
+.botao {
+  background-color: #333;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100px;
+}
+
+.botao:hover {
+  background-color: #555;
+}
+
+.botao.operador {
+  background-color: #5c2dab;
+}
+
+.botao.operador:hover {
+  background-color: #7742d6;
+}
+
+.botao.igual {
+  background-color: #228b22;
+}
+
+.botao.igual:hover {
+  background-color: #2ecc71;
 }
 
 @media (prefers-color-scheme: dark) {
