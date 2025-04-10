@@ -6,9 +6,9 @@ import styles from "../page.module.css";
 export default function Teclado({ onClickNum, onClickClearAll, onClickClearCurrent, onClickEqual, onClickOperation }) {
     return (
         <div className={styles.teclado}>
-            <Botoes valor={"MOD"} onClick={() => onClickOperation("MOD")} />
             <Botoes valor={"CE"} onClick={() => onClickClearAll()} />
             <Botoes valor={"C"} onClick={() => onClickClearCurrent()} />
+            <Botoes valor={"/"} onClick={() => onClickOperation("/")} />
             <Botoes valor={"="} onClick={() => onClickEqual()} />
             <Botoes valor={7} onClick={() => onClickNum('7')} />
             <Botoes valor={8} onClick={() => onClickNum('8')} />

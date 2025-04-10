@@ -6,31 +6,36 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   align-items: center;
   justify-items: center;
+  justify-content: center;
   min-height: 100svh;
   padding: 80px;
-  gap: 64px;
+  gap: 40px;
   font-family: var(--font-geist-sans);
-  background-color: #cc64ec;
+  background-image: url(/background.jpg);
+  background-size: cover; /* Adicione isso para cobrir todo o fundo */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetição */
 }
 
-.display{
+.display {
   display: flex;
   background-color: #1e1e1e;
   padding: 15px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  max-height: 200px;
   height: 115px;
   animation: fadeInUp 0.2s ease-in-out;
   max-width: 450px;
-
+  width: 100%; /* Adicionado */
+  overflow: hidden; /* Adicionado para garantir que nada ultrapasse */
 }
 
-.valor{
+.valor {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -40,8 +45,29 @@
   justify-content: flex-end;
   align-items: flex-end;
   border-radius: 5px;
-  max-width: 420px;
+  width: 100%; /* Alterado de max-width para width */
+  overflow: hidden; /* Adicionado */
+}
 
+.valorPrev {
+  color: #363636;
+  font-size: 1.2rem;
+  animation: fadeInUp 0.2s ease-in-out;
+  width: 100%; /* Alterado */
+  text-align: right; /* Garante alinhamento à direita */
+  white-space: nowrap; /* Impede quebra de linha */
+  overflow: hidden; /* Esconde o que ultrapassar */
+  text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
+}
+
+.valorAtual {
+  font-size: 2.2rem;
+  animation: fadeInUp 0.2s ease-in-out;
+  width: 100%; /* Alterado */
+  text-align: right; /* Garante alinhamento à direita */
+  white-space: nowrap; /* Impede quebra de linha */
+  overflow: hidden; /* Esconde o que ultrapassar */
+  text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
 }
 
 @keyframes fadeInUp {
@@ -54,18 +80,6 @@
     transform: translateY(0);
   }
 }
-
-.valorPrev {
-  color: #363636;
-  font-size: 1.2rem;
-  animation: fadeInUp 0.2s ease-in-out;
-}
-
-.valorAtual {
-  font-size: 2.2rem;
-  animation: fadeInUp 0.2s ease-in-out;
-}
-
 
 .teclado {
   display: grid;
@@ -95,7 +109,26 @@
   width: 100px;
 }
 
+.botao0 {
+  grid-column: 1 / -1; /* Ocupa da primeira à última coluna */
+  width: 100%; 
+  background-color: #333;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100px;
+}
+
+
 .botao:hover {
+  background-color: #555;
+}
+
+.botao0:hover {
   background-color: #555;
 }
 
